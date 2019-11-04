@@ -1,0 +1,81 @@
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~ (master)
+$ git clone https://github.com/nnafzaoui/noureddinenafzaoui.git
+fatal: destination path 'noureddinenafzaoui' already exists and is not an empty directory.
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~ (master)
+$ cd C:\Users\Admin\Desktop\text\nour\noureddinenafzaoui
+bash: cd: C:UsersAdminDesktoptextnournoureddinenafzaoui: No such file or directory
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~ (master)
+$ cd Desktop
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop (master)
+$ ls
+ desktop.ini   hhh.txt  'Microsoft Edge.lnk'*   pub-Art/   text/
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop (master)
+$ cd test
+bash: cd: test: No such file or directory
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop (master)
+$ cd text
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop/text (master)
+$ ls
+nour/  sk.html.txt
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop/text (master)
+$ cd nour
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop/text/nour (master)
+$ ls
+ali/  F1.txt  F2.txt  F3.txt  noureddinenafzaoui/
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop/text/nour (master)
+$ cd noureddinenafzaoui
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop/text/nour/noureddinenafzaoui (master)
+$ ls
+F1.txt  F2.txt  F3.txt
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop/text/nour/noureddinenafzaoui (master)
+$ git add .
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop/text/nour/noureddinenafzaoui (master)
+$ git pull
+remote: Enumerating objects: 53, done.
+remote: Counting objects: 100% (51/51), done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 45 (delta 11), reused 41 (delta 8), pack-reused 0
+Unpacking objects: 100% (45/45), done.
+From https://github.com/nnafzaoui/noureddinenafzaoui
+   9d52857..cdd58e3  master     -> origin/master
+ * [new branch]      new        -> origin/new
+Updating 9d52857..cdd58e3
+Fast-forward
+ F1.txt          | 3 ++-
+ F2.txt          | 2 +-
+ F3.txt          | 2 ++
+ F4.txt          | 1 +
+ F5.txt          | 2 ++
+ hi              | 1 +
+ hi.txt          | 1 +
+ projet2/F1.txt  | 1 +
+ projet2/F2.txt  | 1 +
+ projet2/F3.txt  | 1 +
+ saloua.txt      | 0
+ "\357\200\272q" | 1 +
+ 12 files changed, 14 insertions(+), 2 deletions(-)
+ create mode 100644 F4.txt
+ create mode 100644 F5.txt
+ create mode 100644 hi
+ create mode 100644 hi.txt
+ create mode 100644 projet2/F1.txt
+ create mode 100644 projet2/F2.txt
+ create mode 100644 projet2/F3.txt
+ create mode 100644 saloua.txt
+ create mode 100644 "\357\200\272q"
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/Desktop/text/nour/noureddinenafzaoui (master)
+$

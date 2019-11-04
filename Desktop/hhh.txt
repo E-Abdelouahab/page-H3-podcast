@@ -1,0 +1,134 @@
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/cloud (master)
+$ ls
+F1.txt  F2.txt  F3.txt
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/cloud (master)
+$ cd ..
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour (master)
+$ pwd
+/c/Users/Admin/desktop/text/nour
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour (master)
+$ git clone https://github.com/nnafzaoui/noureddinenafzaoui.git ali
+Cloning into 'ali'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 16 (delta 2), reused 14 (delta 1), pack-reused 0
+Unpacking objects: 100% (16/16), done.
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour (master)
+$ ls
+ali/  cloud/  F1.txt  F2.txt  F3.txt  noureddinenafzaoui/
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour (master)
+$ cd ali
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ ls
+F1.txt  F2.txt  F3.txt
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ vim F3.txt
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   F3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git add F3.txt
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   F3.txt
+
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git commit -m "ahlan rah bdlt "
+[master 1d71a14] ahlan rah bdlt
+ 1 file changed, 1 insertion(+)
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git push
+To https://github.com/nnafzaoui/noureddinenafzaoui.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/nnafzaoui/noureddinenafzaoui.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git push -force
+error: did you mean `--force` (with two dashes ?)
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git push --force
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (19/19), 2.02 KiB | 79.00 KiB/s, done.
+Total 19 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/nnafzaoui/noureddinenafzaoui.git
+ + ac10530...1d71a14 master -> master (forced update)
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ git clone https://github.com/nnafzaoui/noureddinenafzaoui.git test
+Cloning into 'test'...
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 19 (delta 3), reused 19 (delta 3), pack-reused 0
+Unpacking objects: 100% (19/19), done.
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali (master)
+$ cd test/
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali/test (master)
+$ l
+bash: l: command not found
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali/test (master)
+$ ls
+F1.txt  F2.txt  F3.txt
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali/test (master)
+$ cat F3.txt
+yu
+d
+g
+h
+df
+hg
+ahlan rayss bikher cv
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali/test (master)
+$ ^Ct F3.txt
+
+Admin@DESKTOP-9JBIET6 MINGW64 ~/desktop/text/nour/ali/test (master)
