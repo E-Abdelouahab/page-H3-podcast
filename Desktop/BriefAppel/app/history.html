@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleHistory.css">
+
+  <script src="https://kit.fontawesome.com/c2035ffa68.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <title>HISTORIQUES</title>
+</head>
+
+<body>
+
+  <div class="sidebar-container">
+
+    <ul class="sidebar-navigation">
+
+      <li>
+        <a href="index.html">
+          <i class="fas fa-phone" aria-hidden="true"></i> CALL
+        </a>
+      </li>
+      <li>
+        <a href="contacts.html">
+          <i class="fas fa-address-book" aria-hidden="true"></i> CONTACTS
+        </a>
+      </li>
+      <li>
+        <a href="history.html">
+          <i class="fas fa-history" aria-hidden="true"></i> HISTORY
+        </a>
+      </li>
+
+
+    </ul>
+  </div>
+
+  <div class="content-container">
+
+    <main class="container">
+      <div class="content">
+        <h2 class="title">History</h2>
+        <div class="search">
+          <i class=""></i>
+          <i class="material-icons search-icon">search</i>
+          <input type="text" placeholder="Search for team members" class="search-input" id="input">
+        </div>
+        <ul class="list" id="list">
+          
+        </ul>
+      </div>
+
+    </main>
+
+
+  </div>
+
+  <script>window.$ = window.jQuery = require('jquery');</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+  <script src="js/js.js"></script>
+
+  <script>
+    const electron = require('electron');
+    const {
+        ipcRenderer
+    } = require('electron');
+    const fs = require('fs');
+
+
+    function pairwise(arr, func, skips) {
+        skips = skips || 1;
+        for (var i = 0; i < arr.length - 1; i = i + 2) {
+            func(arr[i], arr[i + skips])
+
+
+        }
+    }
+
+    fs.readFile('history.txt', 'utf8', function (err, data) {
+        if (err) throw err;
+        let res = data.split("-")
+
+
+        pairwise(res, function (number, date) {
+
+            $("#list").append('<li class="list-item"><div class="contact-item"><p>' + number +'</p></div><div class="img-call-div"><img class="img-call" src="img/outgoing-call.svg"" alt="" srcset=""><p class="call-date">' + date +'</p></div></li>');
+
+        }, 1)
+
+
+    });
+</script>
+
+
+</body>
+
+
+</html>
