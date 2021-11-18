@@ -1,0 +1,59 @@
+const express = require('express');
+const app = express();
+var cors = require('cors');
+const mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+
+
+
+const port = process.env.PORT || 3030;
+const logger = require('./config/logger')
+
+
+app.use(express.json());
+app.use(cors());
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: true}));
+// parse requests of content-type - application/json
+app.use(bodyParser.json());
+ 
+
+
+
+mongoose.connect('mongodb+srv://admin:chifae@cluster0.ofnm3.mongodb.net/chifae?retryWrites=true&w=majority' , {
+   useNewUrlParser: true,
+   useUnifiedTopology: true ,
+   useFindAndModify: true,
+}).then(() => {
+  logger.info("Successfully connected to the database");    
+}).catch(err => {
+  logWinston.error('Could not connect to the database. Exiting now...', err);
+  logger.exit();
+});
+
+
+
+// _______________import router_______________ 
+const SuperAdminRoutes = require("./routes/superAdmin.router");
+const doctorRoutes = require("./routes/doctor.router");
+const assSecRoutes = require("./routes/assSec.router");
+const volRoutes = require("./routes/vol.router");
+const eventRoutes = require("./routes/event.router");
+const ChekoutRoutes = require("./routes/Checkout.router")
+const pubAccountRoutes = require("./routes/pubAccount.router")
+
+app.use('/superAdmin',SuperAdminRoutes);
+app.use('/doctor',doctorRoutes);
+app.use('/assSec',assSecRoutes);
+app.use('/vol',volRoutes);
+app.use('/event',eventRoutes);
+app.use('/Checkout', ChekoutRoutes);
+app.use('/pubAccount', pubAccountRoutes);
+
+
+module.exports =app;
+
+
+app.listen(port, () => {
+    console.log(`app listening at http://localhost:${port}`)
+  }) 
